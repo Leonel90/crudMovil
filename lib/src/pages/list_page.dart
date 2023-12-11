@@ -1,3 +1,4 @@
+import 'package:crud/src/db/operation.dart';
 import 'package:crud/src/pages/save_pages.dart';
 import 'package:flutter/material.dart';
 
@@ -6,13 +7,13 @@ class ListPage extends StatelessWidget {
   //! Para cuando se llamen
   static const String ROUTE = "/";
 
-
   @override
   Widget build(BuildContext context) {
+    Operation.notes;
     return Scaffold(
       floatingActionButton: FloatingActionButton(
-        child: Icon(Icons.add), 
-        onPressed: (){
+        child: Icon(Icons.add),
+        onPressed: () {
           Navigator.pushNamed(context, SavePages.ROUTE);
         },
       ),
